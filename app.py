@@ -18,7 +18,7 @@ def make_prediction(img,model):
         print("No Tumor")
     return res
 
-model = tf.keras.models.load_model('cnn_tumor.h5')
+model = tf.keras.models.load_model('cnn_tumor.h5',compile=False)
 st.title("Brain Tumor Detector")
 img=st.file_uploader("Upload Image",type=['jpg','png','jpeg'])
 if img:
